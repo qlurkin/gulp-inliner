@@ -1,0 +1,27 @@
+{
+  "name": "gulp-inliner",
+  "version": "1.0.0",
+  "description": "Let you use Remy Sharp's Inliner in your gulp tasks.",
+  "main": "gulp-inliner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qlurkin/gulp-inliner.git"
+  },
+  "keywords": [
+    "gulp",
+    "inliner"
+  ],
+  "author": "Quentin Lurkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qlurkin/gulp-inliner/issues"
+  },
+  "homepage": "https://github.com/qlurkin/gulp-inliner#readme",
+  "dependencies": {
+    "inliner": "^1.10.2",
+    "through2": "^2.0.3"
+  }
+}

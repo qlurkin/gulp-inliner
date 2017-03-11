@@ -1,6 +1,6 @@
 {
   "name": "gulp-inliner",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Let you use Remy Sharp's Inliner in your gulp tasks.",
   "main": "gulp-inliner.js",
   "scripts": {

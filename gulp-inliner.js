@@ -1,7 +1,7 @@
 var through = require('through2');
 var Inliner = require('inliner');
 
-module.exports = function() {
+module.exports = function(options) {
   return through.obj(function(file, encoding, callback) {
     if (file.isNull()) {
       return callback(null, file);
@@ -14,14 +14,14 @@ module.exports = function() {
       });
       file.contents.on('end', function(){
         content = Buffer.concat(content).toString();
-        new Inliner(content, function (error, result) {
+        new Inliner(content, options, function (error, result) {
           file.contents = new Buffer(result)
           callback(null, file);
         });
       });
     } else if (file.isBuffer()) {
       var content = String(file.contents);
-      new Inliner(content, function (error, result) {
+      new Inliner(content, options, function (error, result) {
         file.contents = new Buffer(result)
         callback(null, file);
       });
